@@ -4,3 +4,4 @@ matplotlib==3.5.1
 pandas==1.2.4
 ipyleaflet==0.16.0
 jupyter-book==0.7.0
+Jinja2==3.1
