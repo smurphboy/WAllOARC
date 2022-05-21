@@ -1,7 +1,7 @@
-ctyparser==2.2.1
-gspread==5.3.2
-matplotlib==3.5.1
-pandas==1.2.4
-ipyleaflet==0.16.0
+ctyparse
+gspread
+matplotlib
+pandas
+ipyleaflet
 jupyter-book<0.7.0
 jinja2<3.1
