@@ -1,4 +1,4 @@
-ctyparse
+ctyparse<2.2.1
 gspread
 matplotlib
 pandas
