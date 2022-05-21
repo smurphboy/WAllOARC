@@ -1,0 +1,5 @@
+ctyparser==2.2.1
+gspread==5.3.2
+matplotlib==3.5.1
+pandas==1.2.4
+ipyleaflet==0.16.0
