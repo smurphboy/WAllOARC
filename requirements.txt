@@ -1,4 +1,4 @@
-ctyparser>2.2.1
+ctyparser==2.2.1
 gspread
 matplotlib
 pandas
