@@ -1,0 +1,864 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; My Jupyter Book</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-2 bd-sidebar site-navigation show single-page" id="site-navigation">
+    
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/WorkedAllOARC.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/WorkedAllOARC.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ctyparser</span>
+<span class="kn">import</span> <span class="nn">gspread</span> <span class="k">as</span> <span class="nn">gs</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span><span class="p">,</span> <span class="n">basemaps</span><span class="p">,</span> <span class="n">basemap_to_tiles</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NETLIFY&#39;</span><span class="p">):</span>
+    <span class="n">credentialkeys</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">,</span> <span class="s1">&#39;project_id&#39;</span><span class="p">,</span> <span class="s1">&#39;private_key_id&#39;</span><span class="p">,</span> <span class="s1">&#39;private_key&#39;</span><span class="p">,</span> <span class="s1">&#39;client_email&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;client_id&#39;</span><span class="p">,</span> <span class="s1">&#39;auth_url&#39;</span><span class="p">,</span> <span class="s1">&#39;token_uri&#39;</span><span class="p">,</span> <span class="s1">&#39;auth_provider_x509_cert_url&#39;</span><span class="p">,</span> <span class="s1">&#39;client_x509_cert_url&#39;</span><span class="p">]</span>
+    <span class="n">credentials</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">credentialkeys</span><span class="p">:</span>
+        <span class="n">credentials</span><span class="p">[</span><span class="s1">&#39;key&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="n">gc</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">service_account_from_dict</span><span class="p">(</span><span class="n">credentials</span><span class="p">)</span>
+    <span class="n">sh</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open_by_url</span><span class="p">(</span><span class="s1">&#39;https://docs.google.com/spreadsheets/d/1dpciJGykIvwxHWgWrw_KTVi10EisyUZ6cah962oaStI/edit?usp=sharing&#39;</span><span class="p">)</span>
+    <span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">worksheet</span><span class="p">(</span><span class="s1">&#39;Form responses 1&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">gc</span> <span class="o">=</span> <span class="n">gs</span><span class="o">.</span><span class="n">service_account</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;../workedalloarc-72453018052d.json&#39;</span><span class="p">)</span>
+    <span class="n">sh</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="n">open_by_url</span><span class="p">(</span><span class="s1">&#39;https://docs.google.com/spreadsheets/d/1dpciJGykIvwxHWgWrw_KTVi10EisyUZ6cah962oaStI/edit?usp=sharing&#39;</span><span class="p">)</span>
+    <span class="n">ws</span> <span class="o">=</span> <span class="n">sh</span><span class="o">.</span><span class="n">worksheet</span><span class="p">(</span><span class="s1">&#39;Form responses 1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ws</span><span class="o">.</span><span class="n">get_all_records</span><span class="p">())</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Timestamp</th>
+      <th>QSO Datetime (UTC)</th>
+      <th>Your Callsign</th>
+      <th>Their Callsign</th>
+      <th>Band</th>
+      <th>Mode</th>
+      <th>Locator Sent</th>
+      <th>Locator Received</th>
+      <th>SOTA / IOAT / Sat / Network information</th>
+      <th>Innovation</th>
+      <th>Any other details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>26/04/2022 20:34:04</td>
+      <td>27/04/2022 12:23:00</td>
+      <td>M0SMU</td>
+      <td>M7SMU</td>
+      <td>144 MHz (2m)</td>
+      <td>FM</td>
+      <td>IO81oj</td>
+      <td>IO81ql</td>
+      <td>EU-005</td>
+      <td>Not innovative at all</td>
+      <td>test</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>26/04/2022 20:34:35</td>
+      <td>19/04/2022 09:00:00</td>
+      <td>M0SMU</td>
+      <td>2E0UMS</td>
+      <td>7 MHz (40m)</td>
+      <td>SSB</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26/04/2022 20:37:12</td>
+      <td>24/04/2021 11:00:00</td>
+      <td>2e0ggj</td>
+      <td>m0nvk</td>
+      <td>7 MHz (40m)</td>
+      <td>SSB</td>
+      <td>io95fb</td>
+      <td>m0nvk home qth</td>
+      <td></td>
+      <td>Ran one or two full courses :-)</td>
+      <td>Am a good egg !</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>26/04/2022 20:39:58</td>
+      <td>20/03/2022 19:31:00</td>
+      <td>mojqq</td>
+      <td>m0lte</td>
+      <td>7 MHz (40m)</td>
+      <td>Olivia</td>
+      <td>io95ec</td>
+      <td>nk</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>26/04/2022 20:41:07</td>
+      <td>26/04/2022 15:30:00</td>
+      <td>m0jqq</td>
+      <td>m0smu</td>
+      <td>144 MHz (2m)</td>
+      <td>DMR</td>
+      <td>none</td>
+      <td>none</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>26/04/2022 22:18:00</td>
+      <td>26/04/2022 22:04:00</td>
+      <td>M0SMU</td>
+      <td>2EØVCC/P</td>
+      <td>144 MHz (2m)</td>
+      <td>SSB</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>27/04/2022 12:27:40</td>
+      <td>27/04/2022 12:24:00</td>
+      <td>EI5IYB /P</td>
+      <td>M0SMU</td>
+      <td>Gamma Wave</td>
+      <td>Telepathy93</td>
+      <td>IO63we</td>
+      <td>IO81oj</td>
+      <td>Brain Waves</td>
+      <td>Well...</td>
+      <td>Detailed details</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>29/04/2022 11:28:11</td>
+      <td>28/04/2022 09:00:00</td>
+      <td>2E0UMS</td>
+      <td>M0OUK</td>
+      <td>144 MHz (2m)</td>
+      <td>SSB</td>
+      <td>IO81oj</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>29/04/2022 23:14:57</td>
+      <td>28/04/2022 21:22:00</td>
+      <td>EI5IYB</td>
+      <td>TF2MSN</td>
+      <td>7 MHz (40m)</td>
+      <td>FT8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>29/04/2022 23:18:41</td>
+      <td>29/04/2022 22:17:00</td>
+      <td>EI5IYB</td>
+      <td>IW9FRA</td>
+      <td>7 MHz (40m)</td>
+      <td>FT8</td>
+      <td>IO63</td>
+      <td>JM68</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Next we clean the callsigns up and find any prefix / suffix and the DXCC</span>
+<span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;^([A-Z0-9]+[\/])?([A-Z][0-9]|[A-Z]{1,2}|[0-9][A-Z])([0-9]|[0-9]+)([A-Z]+)([\/][A-Z0-9]+)?&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Your Callsign Clean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Your Callsign&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Ø&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Your DXCC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Your Callsign Clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Your Prefix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Your Callsign Clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Your Suffix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Your Callsign Clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Their Callsign Clean&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Their Callsign&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;Ø&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Their DXCC&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Their Callsign Clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Their Prefix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Their Callsign Clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Their Suffix&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Their Callsign Clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">regex</span><span class="p">,</span> <span class="n">expand</span><span class="o">=</span><span class="kc">True</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Timestamp</th>
+      <th>QSO Datetime (UTC)</th>
+      <th>Your Callsign</th>
+      <th>Their Callsign</th>
+      <th>Band</th>
+      <th>Mode</th>
+      <th>Locator Sent</th>
+      <th>Locator Received</th>
+      <th>SOTA / IOAT / Sat / Network information</th>
+      <th>Innovation</th>
+      <th>Any other details</th>
+      <th>Your Callsign Clean</th>
+      <th>Your DXCC</th>
+      <th>Your Prefix</th>
+      <th>Your Suffix</th>
+      <th>Their Callsign Clean</th>
+      <th>Their DXCC</th>
+      <th>Their Prefix</th>
+      <th>Their Suffix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>26/04/2022 20:34:04</td>
+      <td>27/04/2022 12:23:00</td>
+      <td>M0SMU</td>
+      <td>M7SMU</td>
+      <td>144 MHz (2m)</td>
+      <td>FM</td>
+      <td>IO81oj</td>
+      <td>IO81ql</td>
+      <td>EU-005</td>
+      <td>Not innovative at all</td>
+      <td>test</td>
+      <td>M0SMU</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>M7SMU</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>26/04/2022 20:34:35</td>
+      <td>19/04/2022 09:00:00</td>
+      <td>M0SMU</td>
+      <td>2E0UMS</td>
+      <td>7 MHz (40m)</td>
+      <td>SSB</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>M0SMU</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2E0UMS</td>
+      <td>2E</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>26/04/2022 20:37:12</td>
+      <td>24/04/2021 11:00:00</td>
+      <td>2e0ggj</td>
+      <td>m0nvk</td>
+      <td>7 MHz (40m)</td>
+      <td>SSB</td>
+      <td>io95fb</td>
+      <td>m0nvk home qth</td>
+      <td></td>
+      <td>Ran one or two full courses :-)</td>
+      <td>Am a good egg !</td>
+      <td>2E0GGJ</td>
+      <td>2E</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>M0NVK</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>26/04/2022 20:39:58</td>
+      <td>20/03/2022 19:31:00</td>
+      <td>mojqq</td>
+      <td>m0lte</td>
+      <td>7 MHz (40m)</td>
+      <td>Olivia</td>
+      <td>io95ec</td>
+      <td>nk</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>MOJQQ</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>M0LTE</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>26/04/2022 20:41:07</td>
+      <td>26/04/2022 15:30:00</td>
+      <td>m0jqq</td>
+      <td>m0smu</td>
+      <td>144 MHz (2m)</td>
+      <td>DMR</td>
+      <td>none</td>
+      <td>none</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>M0JQQ</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>M0SMU</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>26/04/2022 22:18:00</td>
+      <td>26/04/2022 22:04:00</td>
+      <td>M0SMU</td>
+      <td>2EØVCC/P</td>
+      <td>144 MHz (2m)</td>
+      <td>SSB</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>M0SMU</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2E0VCC/P</td>
+      <td>2E</td>
+      <td>NaN</td>
+      <td>/P</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>27/04/2022 12:27:40</td>
+      <td>27/04/2022 12:24:00</td>
+      <td>EI5IYB /P</td>
+      <td>M0SMU</td>
+      <td>Gamma Wave</td>
+      <td>Telepathy93</td>
+      <td>IO63we</td>
+      <td>IO81oj</td>
+      <td>Brain Waves</td>
+      <td>Well...</td>
+      <td>Detailed details</td>
+      <td>EI5IYB/P</td>
+      <td>EI</td>
+      <td>NaN</td>
+      <td>/P</td>
+      <td>M0SMU</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>29/04/2022 11:28:11</td>
+      <td>28/04/2022 09:00:00</td>
+      <td>2E0UMS</td>
+      <td>M0OUK</td>
+      <td>144 MHz (2m)</td>
+      <td>SSB</td>
+      <td>IO81oj</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2E0UMS</td>
+      <td>2E</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>M0OUK</td>
+      <td>M</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>29/04/2022 23:14:57</td>
+      <td>28/04/2022 21:22:00</td>
+      <td>EI5IYB</td>
+      <td>TF2MSN</td>
+      <td>7 MHz (40m)</td>
+      <td>FT8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>EI5IYB</td>
+      <td>EI</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>TF2MSN</td>
+      <td>TF</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>29/04/2022 23:18:41</td>
+      <td>29/04/2022 22:17:00</td>
+      <td>EI5IYB</td>
+      <td>IW9FRA</td>
+      <td>7 MHz (40m)</td>
+      <td>FT8</td>
+      <td>IO63</td>
+      <td>JM68</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>EI5IYB</td>
+      <td>EI</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>IW9FRA</td>
+      <td>IW</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check the DXCC is valid</span>
+<span class="n">cty</span> <span class="o">=</span> <span class="n">ctyparser</span><span class="o">.</span><span class="n">BigCty</span><span class="p">()</span>
+<span class="n">cty</span><span class="o">.</span><span class="n">import_dat</span><span class="p">(</span><span class="s1">&#39;cty.dat&#39;</span><span class="p">)</span>
+<span class="c1">#df[&#39;Valid Your DXCC&#39;] = df[&#39;Your DXCC&#39;].isin(cty.keys())</span>
+<span class="c1">#df[&#39;Valid Their DXCC&#39;] = df[&#39;Their DXCC&#39;].isin(cty.keys())</span>
+<span class="c1">#print(cty[&#39;VK&#39;])</span>
+<span class="c1">#dxccs = {}</span>
+<span class="c1">#for dx in cty.items():</span>
+<span class="c1">#    dxccs[dx[0]] = dx[1][&#39;entity&#39;]</span>
+<span class="c1">#df[&#39;Full Your DXCC&#39;] = df[&#39;Your DXCC&#39;].map(dxccs)</span>
+<span class="c1">#df[&#39;Full Their DXCC&#39;] = df[&#39;Their DXCC&#39;].map(dxccs)</span>
+<span class="c1">#df.head(10)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#print(cty[&#39;IW9&#39;])</span>
+<span class="n">search_key</span> <span class="o">=</span> <span class="s1">&#39;IW9AAB&#39;</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">search_key</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">idx</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">short_key</span> <span class="o">=</span> <span class="n">search_key</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">short_key</span> <span class="o">=</span> <span class="n">search_key</span><span class="p">[:</span><span class="o">-</span><span class="p">(</span><span class="n">idx</span><span class="p">)]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">short_key</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="p">[</span><span class="n">val</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">cty</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">short_key</span> <span class="ow">in</span> <span class="n">key</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">res</span> <span class="o">!=</span> <span class="p">[]:</span>
+        <span class="n">a_key</span> <span class="o">=</span> <span class="s1">&#39;entity&#39;</span>
+        <span class="n">values_of_key</span> <span class="o">=</span> <span class="p">[</span><span class="n">a_dict</span><span class="p">[</span><span class="n">a_key</span><span class="p">]</span> <span class="k">for</span> <span class="n">a_dict</span> <span class="ow">in</span> <span class="n">res</span><span class="p">]</span>
+        <span class="k">break</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">values_of_key</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IW9AAB
+IW9AA
+IW9A
+IW9
+[&#39;Italy&#39;, &#39;Sicily (not DXCC)&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bandplot</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Band&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">bandplot</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;QSOs by Band&#39;</span><span class="p">)</span>
+<span class="n">bandplot</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">bandplot</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Band&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Band&#39;)
+</pre></div>
+</div>
+<img alt="_images/WorkedAllOARC_6_1.png" src="_images/WorkedAllOARC_6_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modeplot</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Mode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">modeplot</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;QSOs by Mode&#39;</span><span class="p">)</span>
+<span class="n">modeplot</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">modeplot</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Mode&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Mode&#39;)
+</pre></div>
+</div>
+<img alt="_images/WorkedAllOARC_7_1.png" src="_images/WorkedAllOARC_7_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">callplot</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Your Callsign Clean&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="n">callplot</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;QSOs by Callsign&#39;</span><span class="p">)</span>
+<span class="n">callplot</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+<span class="n">callplot</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Callsign&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Callsign&#39;)
+</pre></div>
+</div>
+<img alt="_images/WorkedAllOARC_8_1.png" src="_images/WorkedAllOARC_8_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bandmodeplot</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Band&#39;</span><span class="p">,</span><span class="s1">&#39;Mode&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Band&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Mode&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/WorkedAllOARC_9_0.png" src="_images/WorkedAllOARC_9_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">callsignmodeplot</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Your Callsign Clean&#39;</span><span class="p">,</span><span class="s1">&#39;Mode&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Your Callsign Clean&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Mode&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/WorkedAllOARC_10_0.png" src="_images/WorkedAllOARC_10_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">Map</span><span class="p">(</span>
+    <span class="n">basemap</span><span class="o">=</span><span class="n">basemap_to_tiles</span><span class="p">(</span><span class="n">basemaps</span><span class="o">.</span><span class="n">OpenStreetMap</span><span class="o">.</span><span class="n">Mapnik</span><span class="p">),</span>
+    <span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="mf">48.204</span><span class="p">,</span> <span class="mf">350.121</span><span class="p">),</span>
+    <span class="n">zoom</span><span class="o">=</span><span class="mi">3</span>
+    <span class="p">)</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "329ab4aaafe7436cb8da3c221541b64c"}
+</script></div>
+</div>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"3c7a440df06046edaf22000508b53326": {"model_name": "LeafletTileLayerModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletTileLayerModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletTileLayerView", "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors", "base": true, "bottom": true, "bounds": null, "detect_retina": false, "loading": false, "max_native_zoom": 18, "max_zoom": 19, "min_native_zoom": 0, "min_zoom": 1, "name": "OpenStreetMap.Mapnik", "no_wrap": false, "opacity": 1.0, "options": ["attribution", "bounds", "detect_retina", "max_native_zoom", "max_zoom", "min_native_zoom", "min_zoom", "no_wrap", "tile_size", "tms"], "popup": null, "popup_max_height": null, "popup_max_width": 300, "popup_min_width": 50, "show_loading": false, "tile_size": 256, "tms": false, "url": "https://a.tile.openstreetmap.org/{z}/{x}/{y}.png", "visible": true}}, "471e5cc64b0f4101a4d9140d60b47198": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "d0fc729512f0451992df5e1d8e40a928": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "move"}}, "26de60c460eb44c8b79f1c61d04b5163": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b5caaf6543aa486b8ae34c1b0b6e4bc1": {"model_name": "LeafletMapStyleModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "cursor": "grab"}}, "329ab4aaafe7436cb8da3c221541b64c": {"model_name": "LeafletMapModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_dom_classes": [], "_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletMapModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletMapView", "bottom": 0.0, "bounce_at_zoom_limits": true, "box_zoom": true, "center": [48.204, 350.121], "close_popup_on_click": true, "controls": ["IPY_MODEL_da674a1b031147ad901d2bde265d027f", "IPY_MODEL_fa2cfafacf6e45d88c5005792e57c03e"], "crs": {"name": "EPSG3857", "custom": false}, "default_style": "IPY_MODEL_471e5cc64b0f4101a4d9140d60b47198", "double_click_zoom": true, "dragging": true, "dragging_style": "IPY_MODEL_d0fc729512f0451992df5e1d8e40a928", "east": 0.0, "fullscreen": false, "inertia": true, "inertia_deceleration": 3000, "inertia_max_speed": 1500, "interpolation": "bilinear", "keyboard": true, "keyboard_pan_offset": 80, "keyboard_zoom_offset": 1, "layers": ["IPY_MODEL_3c7a440df06046edaf22000508b53326"], "layout": "IPY_MODEL_26de60c460eb44c8b79f1c61d04b5163", "left": 9007199254740991.0, "max_zoom": 18.0, "min_zoom": 1.0, "modisdate": "2022-05-21", "north": 0.0, "options": ["bounce_at_zoom_limits", "box_zoom", "center", "close_popup_on_click", "double_click_zoom", "dragging", "fullscreen", "inertia", "inertia_deceleration", "inertia_max_speed", "interpolation", "keyboard", "keyboard_pan_offset", "keyboard_zoom_offset", "max_zoom", "min_zoom", "prefer_canvas", "scroll_wheel_zoom", "tap", "tap_tolerance", "touch_zoom", "world_copy_jump", "zoom", "zoom_animation_threshold", "zoom_delta", "zoom_snap", "zoom_start"], "prefer_canvas": false, "right": 0.0, "scroll_wheel_zoom": false, "south": 0.0, "style": "IPY_MODEL_b5caaf6543aa486b8ae34c1b0b6e4bc1", "tap": true, "tap_tolerance": 15, "top": 9007199254740991.0, "touch_zoom": true, "west": 0.0, "window_url": "", "world_copy_jump": false, "zoom": 3.0, "zoom_animation_threshold": 4, "zoom_delta": 1.0, "zoom_snap": 1.0, "zoom_start": 12.0}}, "da674a1b031147ad901d2bde265d027f": {"model_name": "LeafletZoomControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletZoomControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletZoomControlView", "options": ["position", "zoom_in_text", "zoom_in_title", "zoom_out_text", "zoom_out_title"], "position": "topleft", "zoom_in_text": "+", "zoom_in_title": "Zoom in", "zoom_out_text": "-", "zoom_out_title": "Zoom out"}}, "fa2cfafacf6e45d88c5005792e57c03e": {"model_name": "LeafletAttributionControlModel", "model_module": "jupyter-leaflet", "model_module_version": "^0.16.0", "state": {"_model_module": "jupyter-leaflet", "_model_module_version": "^0.16.0", "_model_name": "LeafletAttributionControlModel", "_view_count": null, "_view_module": "jupyter-leaflet", "_view_module_version": "^0.16.0", "_view_name": "LeafletAttributionControlView", "options": ["position", "prefix"], "position": "bottomright", "prefix": "ipyleaflet"}}}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The Jupyter Book community<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
