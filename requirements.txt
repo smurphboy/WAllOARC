@@ -1,5 +1,6 @@
 ctyparser>=2.2.1
 gspread
+maidenhead
 matplotlib
 pandas
 ipyleaflet
