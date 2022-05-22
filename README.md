@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ee42e5f7-6f9d-49e0-9cdb-c27a76197ca2/deploy-status)](https://app.netlify.com/sites/silver-alfajores-965b56/deploys)
+
 # Worked All OARC
 
 ## tl;dr
