@@ -1,7 +1,7 @@
 ctyparser>=2.2.1
 gspread
 maidenhead
-matplotlib>=3.4
+matplotlib>=3.5.2
 pandas
 ipyleaflet
 ipywidgets
